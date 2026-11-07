@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Confirmação de presença para a festa de 15 anos da Nicolly."
+    >
+
+    <meta
+        name="theme-color"
+        content="#9dd8f5"
+    >
+
+    <title>Confirmação de Presença | XV Anos da Nicolly</title>
+
+    <!-- CSS principal -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+
+<body class="pagina-convidados">
+
+    <!-- =====================================================
+         CONTEUDO PRINCIPAL
+         ===================================================== -->
+
+    <main class="convidados">
+
+
+        <!-- =================================================
+             BOTAO VOLTAR
+             ================================================= -->
+
+        <a
+            href="index.html"
+            class="voltar"
+            aria-label="Voltar para o convite principal"
+        >
+            ← Voltar ao convite
+        </a>
+
+
+        <!-- =================================================
+             CABECALHO
+             ================================================= -->
+
+        <header class="cabecalho-convidados">
+
+            <span
+                class="estrela"
+                aria-hidden="true"
+            >
+                ✦
+            </span>
+
+
+            <h1>
+                Confirme sua presença
+            </h1>
+
+
+            <p>
+                Sua presença tornará esse momento
+                ainda mais especial.
+            </p>
+
+        </header>
+
+
+        <!-- =================================================
+             AREA DE CONFIRMACAO
+             ================================================= -->
+
+        <section
+            class="confirmacao"
+            id="confirmacao"
+            aria-labelledby="titulo-confirmacao"
+        >
+
+            <h2 id="titulo-confirmacao">
+                Encontre seu convite
+            </h2>
+
+
+            <p>
+                Digite seu nome abaixo para localizar
+                seu convite.
+            </p>
+
+
+            <!-- =============================================
+                 BUSCA
+                 ============================================= -->
+
+            <div class="campo-pesquisa">
+
+                <label for="nomeConvidado">
+                    Seu nome
+                </label>
+
+
+                <input
+                    type="text"
+                    id="nomeConvidado"
+                    name="nomeConvidado"
+                    placeholder="Digite seu nome"
+                    autocomplete="name"
+                    maxlength="80"
+                    enterkeyhint="search"
+                    aria-describedby="instrucaoBusca"
+                >
+
+
+                <small
+                    id="instrucaoBusca"
+                    class="instrucao-busca"
+                >
+                    Não precisa se preocupar com letras
+                    maiúsculas ou acentos.
+                </small>
+
+
+                <button
+                    type="button"
+                    id="btnBuscar"
+                >
+                    Buscar meu convite
+                </button>
+
+            </div>
+
+
+            <!-- =============================================
+                 RESULTADOS
+
+                 O confirmacao.js preenche automaticamente
+                 esta área depois da pesquisa.
+                 ============================================= -->
+
+            <div
+                id="resultadoBusca"
+                class="resultado-busca"
+                aria-live="polite"
+                aria-atomic="false"
+                hidden
+            ></div>
+
+        </section>
+
+
+        <!-- =================================================
+             MENSAGEM FINAL
+             ================================================= -->
+
+        <section
+            class="mensagem-confirmacao"
+            aria-label="Mensagem da aniversariante"
+        >
+
+            <span
+                class="estrela"
+                aria-hidden="true"
+            >
+                ✦
+            </span>
+
+
+            <p>
+                Mal posso esperar para viver
+                esse momento com vocês!
+            </p>
+
+
+            <strong>
+                Nicolly
+            </strong>
+
+        </section>
+
+
+        <!-- =================================================
+             RODAPE
+             ================================================= -->
+
+        <footer class="rodape-convidados">
+
+            <p>
+                XV Anos da Nicolly
+                <span aria-hidden="true">•</span>
+                2026
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT DA CONFIRMACAO
+
+         Mantemos no final do body para garantir que o HTML
+         já esteja carregado quando o JavaScript for executado.
+         ===================================================== -->
+
+    <script src="js/confirmacao.js"></script>
+
+</body>
+
+</html>

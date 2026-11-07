@@ -1,0 +1,1994 @@
+/* =========================================================
+   NICOLLY - XV ANOS
+   CSS PRINCIPAL
+   ========================================================= */
+
+
+/* =========================================================
+   1. VARIAVEIS
+   ========================================================= */
+
+:root {
+    --azul-escuro: #173f73;
+    --azul-medio: #2f67a7;
+    --azul-claro: #bfe7fb;
+
+    --branco: #ffffff;
+
+    --prata-claro: #eeeeee;
+    --prata: #b9bec5;
+    --prata-escuro: #878d96;
+
+    --fonte-elegante:
+        "Cormorant Garamond",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    --fonte-normal:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    color: var(--azul-escuro);
+
+    font-family: var(--fonte-elegante);
+
+    text-align: center;
+
+    overflow-x: hidden;
+
+    background-color: #9dd8f5;
+
+    background-image:
+        linear-gradient(
+            rgba(218, 242, 255, 0.08),
+            rgba(218, 242, 255, 0.08)
+        ),
+        url("../assets/imagens/fundo1.jpeg");
+
+    background-position: center top;
+
+    background-repeat: no-repeat;
+
+    /*
+       Mantém a proporção da imagem vertical
+       e encaixa a largura na tela.
+    */
+    background-size: 100% auto;
+
+    /*
+       IMPORTANTE:
+       agora a imagem acompanha a rolagem.
+    */
+    background-attachment: scroll;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   3. CONVITE
+   ========================================================= */
+
+.convite {
+    width: 100%;
+
+    max-width: 720px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 40px 24px 50px;
+
+    position: relative;
+
+    background: transparent;
+}
+
+
+/* Camada suave para melhorar a leitura */
+
+.convite::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.04),
+            rgba(255, 255, 255, 0.10)
+        );
+}
+
+
+/* =========================================================
+   4. HERO / CABECALHO
+   ========================================================= */
+
+.hero {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px 10px 15px;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   5. MONOGRAMA
+   ========================================================= */
+
+.monograma {
+    width: 112px;
+    height: 112px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 13px;
+
+    border: 2px solid rgba(23, 63, 115, 0.72);
+
+    border-radius: 50%;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.48),
+            rgba(255, 255, 255, 0.10)
+        );
+
+    box-shadow:
+        inset 0 0 15px rgba(255, 255, 255, 0.7),
+        0 4px 18px rgba(23, 63, 115, 0.12);
+}
+
+
+/* Circulo interno */
+
+.monograma::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border: 1px solid rgba(23, 63, 115, 0.42);
+
+    border-radius: 50%;
+}
+
+
+/* Coroa */
+
+.monograma::after {
+    content: "♕";
+
+    position: absolute;
+
+    top: -25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--azul-escuro);
+
+    font-size: 27px;
+
+    text-shadow:
+        0 1px 4px rgba(255, 255, 255, 0.8);
+}
+
+
+.monograma span {
+    position: relative;
+
+    z-index: 2;
+
+    font-family: var(--fonte-elegante);
+
+    font-style: italic;
+
+    font-size: 4.4rem;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: var(--azul-escuro);
+}
+
+
+/* =========================================================
+   6. NOME NICOLLY
+   ========================================================= */
+
+.hero h1 {
+    margin-top: 8px;
+
+    color: var(--azul-escuro);
+
+    font-family: var(--fonte-elegante);
+
+    font-size: clamp(4.2rem, 16vw, 7.5rem);
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    letter-spacing: -3px;
+
+    text-shadow:
+        0 2px 2px rgba(255, 255, 255, 0.6),
+        0 0 15px rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   7. XV ANOS
+   ========================================================= */
+
+.titulo-xv {
+    width: 100%;
+
+    max-width: 440px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 22px;
+}
+
+
+.titulo-xv span {
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(23, 63, 115, 0.75),
+            transparent
+        );
+}
+
+
+.titulo-xv p {
+    white-space: nowrap;
+
+    font-size: 1.7rem;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   8. FRASE PRINCIPAL
+   ========================================================= */
+
+.frase-principal {
+    width: 100%;
+
+    max-width: 510px;
+
+    margin: 15px auto 8px;
+
+    font-size: clamp(1.15rem, 4vw, 1.45rem);
+
+    font-weight: 500;
+
+    line-height: 1.25;
+
+    text-shadow:
+        0 1px 5px rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================================
+   9. DRESS CODE
+   ========================================================= */
+
+.dress-code {
+    max-width: 500px;
+
+    margin: 7px auto 0;
+
+    font-size: 1rem;
+
+    line-height: 1.3;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   10. SAVE THE DATE
+   ========================================================= */
+
+.save-date {
+    padding: 35px 10px 20px;
+
+    background: transparent;
+}
+
+
+.save {
+    font-size: 1.7rem;
+
+    font-style: italic;
+
+    transform: rotate(-5deg);
+
+    margin-bottom: -4px;
+}
+
+
+.save-date h2 {
+    margin: 0;
+
+    font-size: 1.65rem;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   11. DATA
+   ========================================================= */
+
+.data {
+    width: 100%;
+
+    max-width: 440px;
+
+    margin: 12px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.data-lateral {
+    padding: 9px 5px;
+
+    border-top:
+        1px solid rgba(23, 63, 115, 0.65);
+
+    border-bottom:
+        1px solid rgba(23, 63, 115, 0.65);
+
+    font-size: 1.35rem;
+
+    font-style: italic;
+}
+
+
+.numero-dia {
+    padding: 0 18px;
+
+    border-left:
+        1px solid rgba(23, 63, 115, 0.5);
+
+    border-right:
+        1px solid rgba(23, 63, 115, 0.5);
+
+    font-size: clamp(4rem, 16vw, 6rem);
+
+    font-style: italic;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   12. HORARIO
+   ========================================================= */
+
+.horario {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 2px 30px 7px;
+
+    border-bottom:
+        1px solid rgba(23, 63, 115, 0.5);
+
+    font-size: 3rem;
+
+    font-style: italic;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   13. CONTAGEM REGRESSIVA
+   ========================================================= */
+
+.area-contagem {
+    padding: 25px 10px 15px;
+
+    background: transparent;
+}
+
+
+.texto-contagem {
+    margin-bottom: 8px;
+
+    font-size: 0.95rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+}
+
+
+.contador {
+    width: 100%;
+
+    max-width: 430px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 7px;
+}
+
+
+.contador div {
+    min-width: 0;
+
+    padding: 8px 3px;
+
+    background: rgba(255, 255, 255, 0.24);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.48);
+
+    border-radius: 11px;
+
+    backdrop-filter: blur(3px);
+
+    -webkit-backdrop-filter: blur(3px);
+}
+
+
+.contador span {
+    display: block;
+
+    font-size: 1.65rem;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.contador small {
+    display: block;
+
+    margin-top: 3px;
+
+    font-family: var(--fonte-normal);
+
+    font-size: 0.62rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   14. MENSAGEM
+   ========================================================= */
+
+.mensagem {
+    padding: 20px 15px 15px;
+
+    background: transparent;
+}
+
+
+.mensagem p {
+    font-size: 1.45rem;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   15. TRES BOTOES
+   ========================================================= */
+
+.acoes {
+    width: 100%;
+
+    max-width: 430px;
+
+    margin: 10px auto 0;
+
+    padding: 10px 5px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    background: transparent;
+}
+
+
+.acao {
+    width: 120px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 9px;
+
+    text-decoration: none;
+
+    color: var(--azul-escuro);
+
+    transition: transform 0.25s ease;
+}
+
+
+/* =========================================================
+   16. CIRCULOS DOS ICONES
+   ========================================================= */
+
+.acao .icone {
+    width: 82px !important;
+    height: 82px !important;
+
+    min-width: 82px;
+    min-height: 82px;
+
+    max-width: 82px;
+    max-height: 82px;
+
+    flex: 0 0 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            rgba(255, 255, 255, 1),
+            rgba(242, 249, 253, 0.96)
+        );
+
+    border:
+        2px solid var(--prata);
+
+    box-shadow:
+        inset 0 0 12px rgba(255, 255, 255, 0.95),
+        0 3px 0 var(--prata-escuro),
+        0 6px 15px rgba(23, 63, 115, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* PNG dentro do circulo */
+
+.acao .icone img {
+    display: block !important;
+
+    width: 43px !important;
+    height: 43px !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    max-width: 43px !important;
+    max-height: 43px !important;
+
+    object-fit: contain !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+}
+
+
+/* =========================================================
+   17. TEXTO DOS BOTOES
+   ========================================================= */
+
+.texto-acao {
+    width: 100%;
+
+    min-height: 35px;
+
+    display: block;
+
+    text-align: center;
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    color: var(--azul-escuro);
+
+    text-shadow:
+        0 1px 4px rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================================
+   18. EFEITOS DOS BOTOES
+   ========================================================= */
+
+.acao:hover {
+    transform: translateY(-3px);
+}
+
+
+.acao:hover .icone {
+    transform: scale(1.04);
+
+    box-shadow:
+        inset 0 0 12px rgba(255, 255, 255, 0.95),
+        0 4px 0 var(--prata-escuro),
+        0 10px 20px rgba(23, 63, 115, 0.26);
+}
+
+
+.acao:active {
+    transform: scale(0.96);
+}
+
+
+.acao:focus-visible {
+    outline:
+        2px solid var(--azul-escuro);
+
+    outline-offset: 5px;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   19. TEXTO "TOQUE NOS ICONES"
+   ========================================================= */
+
+.toque {
+    margin: 13px auto 25px;
+
+    font-size: 1rem;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   20. INFORMACOES IMPORTANTES
+   ========================================================= */
+
+.informacoes-importantes {
+    width: 100%;
+
+    max-width: 470px;
+
+    margin: 10px auto 35px;
+
+    padding: 10px 15px;
+
+    background:
+        rgba(235, 247, 255, 0.42);
+
+    border:
+        1px solid rgba(23, 63, 115, 0.55);
+
+    border-radius: 3px;
+
+    box-shadow:
+        inset 0 0 5px rgba(255, 255, 255, 0.55);
+}
+
+
+.informacoes-importantes h2 {
+    margin-bottom: 4px;
+
+    font-family: var(--fonte-normal);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 1px;
+}
+
+
+.informacoes-importantes p {
+    font-family: var(--fonte-normal);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+}
+
+
+.informacoes-importantes span {
+    margin: 0 5px;
+}
+
+
+/* =========================================================
+   21. RODAPE
+   ========================================================= */
+
+footer {
+    padding: 15px 10px 30px;
+
+    color: var(--azul-escuro);
+
+    background: transparent;
+}
+
+
+.carruagem {
+    margin-bottom: 8px;
+
+    font-size: 2rem;
+
+    letter-spacing: 7px;
+}
+
+
+footer p {
+    font-size: 1rem;
+
+    letter-spacing: 1px;
+}
+
+
+footer p span {
+    margin: 0 5px;
+}
+
+
+/* =========================================================
+   22. PAGINA DE PRESENTES
+   ========================================================= */
+
+.pagina-presentes {
+    min-height: 100vh;
+
+    color: var(--azul-escuro);
+
+    background-color: #9dd8f5;
+
+    background-image:
+        linear-gradient(
+            rgba(225, 245, 255, 0.10),
+            rgba(225, 245, 255, 0.10)
+        ),
+        url("../assets/imagens/fundo1.jpeg");
+
+    background-position: center top;
+
+    background-size: 100% auto;
+
+    background-repeat: no-repeat;
+
+    background-attachment: scroll;
+}
+
+
+.presentes {
+    width: min(680px, 100%);
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 35px 20px 70px;
+}
+
+
+/* Voltar */
+
+.voltar {
+    width: fit-content;
+
+    display: block;
+
+    padding: 7px 12px;
+
+    margin-bottom: 35px;
+
+    color: var(--azul-escuro);
+
+    background:
+        rgba(255, 255, 255, 0.35);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-family: var(--fonte-normal);
+
+    font-size: 0.8rem;
+}
+
+
+/* Cabecalho presentes */
+
+.cabecalho-presentes {
+    margin-bottom: 35px;
+}
+
+
+.cabecalho-presentes .estrela {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 2rem;
+}
+
+
+.cabecalho-presentes h1 {
+    margin: 5px 0 12px;
+
+    font-family: var(--fonte-elegante);
+
+    font-size: clamp(3.2rem, 12vw, 5.7rem);
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    line-height: 0.95;
+}
+
+
+.cabecalho-presentes p {
+    max-width: 450px;
+
+    margin: 0 auto;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   23. CARTOES DE PRESENTES
+   ========================================================= */
+
+.categoria-presente {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.48);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 25px rgba(23, 63, 115, 0.09);
+
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+.categoria-presente h2 {
+    margin-bottom: 10px;
+
+    font-family: var(--fonte-elegante);
+
+    font-size: 2rem;
+
+    font-weight: 600;
+}
+
+
+.categoria-presente ul {
+    list-style: none;
+
+    line-height: 1.75;
+}
+
+
+.categoria-presente li {
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   24. RODAPE PAGINA PRESENTES
+   ========================================================= */
+
+.rodape-presentes {
+    padding-top: 25px;
+
+    background: transparent;
+
+    color: var(--azul-escuro);
+}
+
+
+.rodape-presentes p {
+    margin-bottom: 20px;
+
+    font-size: 1.2rem;
+}
+
+
+/* =========================================================
+   25. BOTAO GENERICO
+   ========================================================= */
+
+.botao {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            180deg,
+            #285c99,
+            #173f73
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    border-radius: 40px;
+
+    text-decoration: none;
+
+    font-family: var(--fonte-normal);
+
+    font-size: 0.85rem;
+
+    box-shadow:
+        0 6px 16px rgba(23, 63, 115, 0.25);
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   26. TABLET / CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body,
+    .pagina-presentes {
+
+        /*
+           O fundo continua acompanhando
+           toda a rolagem no celular.
+        */
+
+        background-attachment: scroll;
+
+        background-position: center top;
+
+        background-size: 100% auto;
+    }
+
+
+    .convite {
+        padding: 35px 15px 40px;
+    }
+
+
+    .hero {
+        padding-top: 28px;
+    }
+
+
+    .monograma {
+        width: 93px;
+
+        height: 93px;
+    }
+
+
+    .monograma span {
+        font-size: 3.7rem;
+    }
+
+
+    .monograma::after {
+        top: -22px;
+
+        font-size: 23px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(
+                4rem,
+                21vw,
+                6rem
+            );
+    }
+
+
+    .titulo-xv {
+        width: 92%;
+
+        margin-top: 18px;
+    }
+
+
+    .titulo-xv p {
+        font-size: 1.4rem;
+    }
+
+
+    .frase-principal {
+        padding: 0 7px;
+
+        font-size: 1.15rem;
+    }
+
+
+    .dress-code {
+        padding: 0 8px;
+
+        font-size: 0.87rem;
+    }
+
+
+    .save-date {
+        padding-top: 30px;
+    }
+
+
+    .save {
+        font-size: 1.45rem;
+    }
+
+
+    .save-date h2 {
+        font-size: 1.4rem;
+    }
+
+
+    .data {
+        gap: 8px;
+    }
+
+
+    .data-lateral {
+        font-size: 1.05rem;
+    }
+
+
+    .numero-dia {
+        padding: 0 10px;
+
+        font-size: 4.5rem;
+    }
+
+
+    .horario {
+        font-size: 2.55rem;
+    }
+
+
+    .area-contagem {
+        padding-top: 20px;
+    }
+
+
+    .contador {
+        max-width: 350px;
+
+        gap: 5px;
+    }
+
+
+    .contador div {
+        padding: 7px 2px;
+    }
+
+
+    .contador span {
+        font-size: 1.4rem;
+    }
+
+
+    /* Tres icones */
+
+    .acoes {
+        max-width: 340px;
+
+        gap: 6px;
+
+        padding-left: 0;
+
+        padding-right: 0;
+    }
+
+
+    .acao {
+        width: 105px;
+
+        gap: 8px;
+    }
+
+
+    .acao .icone {
+        width: 70px !important;
+        height: 70px !important;
+
+        min-width: 70px;
+        min-height: 70px;
+
+        max-width: 70px;
+        max-height: 70px;
+
+        flex-basis: 70px;
+    }
+
+
+    .acao .icone img {
+        width: 36px !important;
+        height: 36px !important;
+
+        max-width: 36px !important;
+        max-height: 36px !important;
+    }
+
+
+    .texto-acao {
+        font-size: 0.8rem;
+    }
+
+
+    .informacoes-importantes {
+        width: 94%;
+    }
+}
+
+
+/* =========================================================
+   27. CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .convite {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+
+    .acoes {
+        gap: 2px;
+    }
+
+
+    .acao {
+        width: 98px;
+    }
+
+
+    .acao .icone {
+        width: 64px !important;
+        height: 64px !important;
+
+        min-width: 64px;
+        min-height: 64px;
+
+        max-width: 64px;
+        max-height: 64px;
+
+        flex-basis: 64px;
+    }
+
+
+    .acao .icone img {
+        width: 32px !important;
+        height: 32px !important;
+
+        max-width: 32px !important;
+        max-height: 32px !important;
+    }
+
+
+    .texto-acao {
+        font-size: 0.74rem;
+    }
+
+
+    .contador span {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* =========================================================
+   28. ACESSIBILIDADE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+    }
+}
+
+/* =========================================================
+   26. PAGINA DE CONVIDADOS
+   ========================================================= */
+
+.pagina-convidados {
+    min-height: 100vh;
+
+    color: var(--azul-escuro);
+
+    background-color: #9dd8f5;
+
+    /*
+       Mesma imagem utilizada na página de presentes.
+    */
+    background-image:
+        linear-gradient(
+            rgba(225, 245, 255, 0.1),
+            rgba(225, 245, 255, 0.1)
+        ),
+        url("../assets/imagens/fundo1.jpeg");
+
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+
+/* Conteúdo principal */
+
+.convidados {
+    width: min(680px, 100%);
+    min-height: 100vh;
+
+    margin: 0 auto;
+    padding: 35px 20px 70px;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   27. CABECALHO DA PAGINA DE CONVIDADOS
+   ========================================================= */
+
+.cabecalho-convidados {
+    width: 100%;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+
+.cabecalho-convidados .estrela {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 2rem;
+    line-height: 1;
+}
+
+
+.cabecalho-convidados h1 {
+    margin: 5px 0 12px;
+
+    color: var(--azul-escuro);
+
+    font-family: var(--fonte-elegante);
+    font-size: clamp(3.2rem, 12vw, 5.7rem);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 0.95;
+
+    text-shadow:
+        0 2px 2px rgba(255, 255, 255, 0.55),
+        0 0 15px rgba(255, 255, 255, 0.35);
+}
+
+
+.cabecalho-convidados p {
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+
+    text-shadow:
+        0 1px 5px rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   28. AREA DE CONFIRMACAO
+   ========================================================= */
+
+.confirmacao {
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 28px 25px;
+
+    background:
+        rgba(255, 255, 255, 0.5);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.72);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 30px rgba(23, 63, 115, 0.12);
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+
+.confirmacao h2 {
+    margin-bottom: 7px;
+
+    font-family: var(--fonte-elegante);
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1;
+}
+
+
+.confirmacao > p {
+    max-width: 440px;
+
+    margin: 0 auto 22px;
+
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   29. CAMPO DE PESQUISA
+   ========================================================= */
+
+.campo-pesquisa {
+    width: 100%;
+    max-width: 490px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+
+    text-align: left;
+}
+
+
+.campo-pesquisa label {
+    padding-left: 5px;
+
+    font-family: var(--fonte-normal);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+
+.campo-pesquisa input {
+    width: 100%;
+    min-height: 52px;
+
+    padding: 13px 18px;
+
+    color: var(--azul-escuro);
+
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    border:
+        1px solid rgba(23, 63, 115, 0.35);
+
+    border-radius: 30px;
+
+    outline: none;
+
+    font-family: var(--fonte-normal);
+    font-size: 1rem;
+
+    box-shadow:
+        inset 0 2px 5px rgba(23, 63, 115, 0.05);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.campo-pesquisa input::placeholder {
+    color: rgba(23, 63, 115, 0.58);
+}
+
+
+.campo-pesquisa input:focus {
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border-color: var(--azul-medio);
+
+    box-shadow:
+        0 0 0 4px rgba(47, 103, 167, 0.14);
+}
+
+
+/* =========================================================
+   30. BOTOES DA BUSCA
+   ========================================================= */
+
+#btnBuscar,
+.btn-confirmar,
+.btn-voltar,
+.opcao-convite {
+    border: none;
+    cursor: pointer;
+
+    font-family: var(--fonte-normal);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+#btnBuscar,
+.btn-confirmar {
+    width: 100%;
+    min-height: 50px;
+
+    padding: 12px 24px;
+
+    color: var(--branco);
+
+    background:
+        linear-gradient(
+            180deg,
+            #326eb0,
+            #173f73
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.6);
+
+    border-radius: 30px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    box-shadow:
+        0 7px 18px rgba(23, 63, 115, 0.24);
+}
+
+
+#btnBuscar:hover,
+.btn-confirmar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(23, 63, 115, 0.3);
+}
+
+
+#btnBuscar:active,
+.btn-confirmar:active,
+.btn-voltar:active,
+.opcao-convite:active {
+    transform: scale(0.98);
+}
+
+
+#btnBuscar:focus-visible,
+.btn-confirmar:focus-visible,
+.btn-voltar:focus-visible,
+.opcao-convite:focus-visible {
+    outline:
+        3px solid rgba(23, 63, 115, 0.4);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   31. RESULTADO DA BUSCA
+   ========================================================= */
+
+.resultado-busca {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 25px auto 0;
+}
+
+
+.resultado-busca[hidden] {
+    display: none;
+}
+
+
+.convite-encontrado,
+.multiplos-resultados,
+.mensagem-aviso,
+.mensagem-erro,
+.confirmacao-sucesso {
+    width: 100%;
+
+    padding: 24px 20px;
+
+    background:
+        rgba(255, 255, 255, 0.62);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.78);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 9px 22px rgba(23, 63, 115, 0.1);
+
+    animation:
+        aparecerResultado 0.35s ease;
+}
+
+
+@keyframes aparecerResultado {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.resultado-busca h3 {
+    margin-bottom: 9px;
+
+    font-family: var(--fonte-elegante);
+    font-size: 1.9rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+
+.resultado-busca p {
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   32. CONVITE ENCONTRADO
+   ========================================================= */
+
+.nomes-convite {
+    margin: 8px 0;
+
+    font-size: 1.18rem;
+    font-weight: 600;
+}
+
+
+.quantidade-convidados {
+    display: inline-block;
+
+    margin: 4px 0 20px;
+    padding: 5px 12px;
+
+    color: var(--azul-escuro);
+
+    background:
+        rgba(191, 231, 251, 0.6);
+
+    border:
+        1px solid rgba(23, 63, 115, 0.18);
+
+    border-radius: 20px;
+
+    font-family: var(--fonte-normal);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   33. SELECAO DOS CONVIDADOS
+   ========================================================= */
+
+.selecao-presenca {
+    margin: 5px 0 20px;
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(23, 63, 115, 0.18);
+
+    text-align: left;
+}
+
+
+.selecao-presenca h4 {
+    margin-bottom: 4px;
+
+    color: var(--azul-escuro);
+
+    font-family: var(--fonte-elegante);
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
+
+.selecao-presenca > p {
+    margin-bottom: 13px;
+
+    font-family: var(--fonte-normal);
+    font-size: 0.8rem;
+}
+
+
+.lista-presenca {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+
+.membro-convidado {
+    width: 100%;
+    min-height: 48px;
+
+    padding: 10px 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    border:
+        1px solid rgba(23, 63, 115, 0.16);
+
+    border-radius: 13px;
+
+    cursor: pointer;
+
+    font-family: var(--fonte-normal);
+    font-size: 0.95rem;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.membro-convidado:hover {
+    transform: translateX(2px);
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    border-color:
+        rgba(23, 63, 115, 0.3);
+}
+
+
+.membro-convidado input {
+    width: 20px;
+    height: 20px;
+
+    flex: 0 0 20px;
+
+    cursor: pointer;
+
+    accent-color: var(--azul-escuro);
+}
+
+
+.membro-convidado span {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   34. BOTOES DE CONFIRMACAO
+   ========================================================= */
+
+.btn-confirmar {
+    margin-top: 3px;
+}
+
+
+.btn-voltar {
+    width: 100%;
+
+    margin-top: 10px;
+    padding: 11px 20px;
+
+    color: var(--azul-escuro);
+
+    background:
+        rgba(255, 255, 255, 0.52);
+
+    border:
+        1px solid rgba(23, 63, 115, 0.25);
+
+    border-radius: 30px;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+
+.btn-voltar:hover {
+    transform: translateY(-1px);
+
+    background:
+        rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================================
+   35. NOMES REPETIDOS E OPCOES
+   ========================================================= */
+
+.lista-opcoes {
+    margin-top: 17px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.opcao-convite {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    color: var(--azul-escuro);
+
+    background:
+        rgba(255, 255, 255, 0.68);
+
+    border:
+        1px solid rgba(23, 63, 115, 0.2);
+
+    border-radius: 14px;
+
+    text-align: left;
+
+    box-shadow:
+        0 4px 12px rgba(23, 63, 115, 0.06);
+}
+
+
+.opcao-convite:hover {
+    transform: translateY(-2px);
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    border-color:
+        rgba(23, 63, 115, 0.4);
+}
+
+
+.opcao-convite strong {
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+
+.opcao-convite span {
+    color: var(--azul-medio);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   36. MENSAGENS
+   ========================================================= */
+
+.mensagem-aviso {
+    border-color:
+        rgba(47, 103, 167, 0.3);
+}
+
+
+.mensagem-erro {
+    background:
+        rgba(255, 255, 255, 0.68);
+
+    border-color:
+        rgba(135, 141, 150, 0.35);
+}
+
+
+.confirmacao-sucesso {
+    background:
+        rgba(237, 250, 255, 0.78);
+
+    border-color:
+        rgba(47, 103, 167, 0.35);
+}
+
+
+.confirmacao-sucesso h3 {
+    color: var(--azul-escuro);
+}
+
+
+.confirmacao-sucesso p + p {
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   37. RODAPE DA PAGINA DE CONVIDADOS
+   ========================================================= */
+
+.rodape-convidados {
+    padding: 35px 10px 10px;
+
+    color: var(--azul-escuro);
+
+    background: transparent;
+}
+
+
+.rodape-convidados p {
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.4;
+}
